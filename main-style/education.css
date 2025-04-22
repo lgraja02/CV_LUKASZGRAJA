@@ -1,0 +1,115 @@
+/* ===========================EDUCATION NAME AND LINES===============================*/
+.cv-education {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    font-size: 37px;
+    color: rgb(255, 255, 255);
+}
+.cv-education::before, 
+.cv-education::after {
+    content: "";
+    height: 2px;
+    background-color: rgb(245, 245, 245);
+    display: inline-block;
+}
+.cv-education::before {
+    margin-right: 10px; 
+}
+.cv-education::after {
+    margin-left: 10px; 
+}
+
+/* ==============================EDUCATIPON DISPLAY==================================== */
+body {
+    font-family: "Chakra Petch", serif;
+    margin: 0;
+    background-color: #f0f0f0; /* Kolor tła dla lepszej widoczności */
+}
+
+.education-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px; /* Większe padding */
+    color: white;
+}
+
+.education-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0c080800; /* Kolor tła karty */
+    border-radius: 12px; /* Większe zaokrąglenie rogów */
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px; /* Większa maksymalna szerokość karty */
+    padding: 30px; /* Większe padding */
+    margin-bottom: 20px; /* Większy margines między kartami */
+}
+
+.date {
+    font-size: 20px; /* Większy rozmiar czcionki */
+    color: #333333; /* Kolor tekstu */
+    margin-bottom: 20px; /* Większy margines */
+}
+
+.school-info {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Większy odstęp między obrazem a szczegółami */
+    width: 100%; /* Upewnienie się, że kontener zajmuje pełną szerokość */
+}
+
+.school-img-section {
+    flex-shrink: 0; /* Zapobiega kurczeniu się obrazu */
+}
+
+.school-img {
+    width: 150px; /* Większa szerokość obrazu */
+    height: 150px; /* Większa wysokość obrazu */
+    object-fit: cover; /* Przystosowuje obraz do rozmiarów kontenera */
+    border-radius: 50%; /* Okrągłe zdjęcie */
+}
+
+.school-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1; /* Rozciąga sekcję szczegółów, aby wypełnić dostępne miejsce */
+}
+
+.school-name {
+    font-size: 32px; /* Większy rozmiar czcionki */
+    font-weight: bold;
+    color: #333333;
+    margin: 0;
+}
+
+.school-spec {
+    font-size: 20px; /* Większy rozmiar czcionki */
+    color: #666666; /* Jaśniejszy kolor dla specjalizacji */
+    margin: 10px 0 0; /* Większy margines */
+}
+
+@media (max-width: 660px){
+    .school-name{
+        font-size: 1.5em;
+    }
+}
+@media (max-width: 530px){
+    .school-img-section{
+        width: 20%;
+        height: 100%;
+    }
+    .school-img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 475px){
+    .cv-education{
+        font-size: 1.6em;
+    }
+}

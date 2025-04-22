@@ -1,0 +1,18 @@
+POLSKI
+
+!!!!!!!!!!!!   W \wisielec_degejm\cmake-build-debug znajduje się plik wisielec_degejm.exe, po jego nakliknięciu uruchamia się gra. !!!!!!!!!!!!
+Dodatkowo w cmake-build-debug znajdują się wszystkie tekstury, fonty oraz rozszerzenia .dll do 
+silnika graficznego.
+
+Korzystaliśmy z silnika SDL2 (służący do wyświetlania okna)
+SDL2.ttf (służący do wyświetlania fontow)
+SDL2_mixer (służącu do uruchamiania plików .mp3)
+
+
+ENGLISH
+!!!!!!!!!!!! In \wisielec_degejm\cmake-build-debug, there is a file named wisielec_degejm.exe. Clicking on it launches the game. !!!!!!!!!!!!
+Additionally, all the textures, fonts, and .dll extensions for the graphic engine are located in cmake-build-debug.
+
+We used the SDL2 engine (for displaying the window),
+SDL2_ttf (for displaying fonts),
+and SDL2_mixer (for playing .mp3 files).

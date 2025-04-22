@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+        <title>Projects ŁG</title>
+
+        <link rel="stylesheet" href="projects-main.css">
+        <link rel="stylesheet" href="../main-style/navbar.css">
+
+    </head>
+
+    <body>
+        <!-- =========================NAVBAR=========================== -->
+        <nav>
+            <input type="checkbox" id="sidebar-active">
+            <label class="open-sidebar-button" for="sidebar-active">
+                <img class= "hamburger-button" src="/assets/hamburger.png">
+            </label>
+
+            <div class="links-container">
+                <label class="close-sidebar-button" for="sidebar-active">
+                    <img class="close-button" src="/assets/close.png">
+                </label>
+                <a class="home-link" href="../index.html">About me</a>
+                <a href="projects.html">Projects</a>
+                <a id="myShopLink" href="#">My Shop</a>
+                <div class="contact-sector">
+                    <button class="github-button" onclick="window.location.href='https://github.com/lgraja02?tab=overview&from=2025-03-01&to=2025-03-17'">
+                        <img class="github-img" src="/assets/github.png" >
+                    </button>
+                    <button class="linked-button" onclick="window.location.href='https://www.linkedin.com/in/%C5%82ukasz-graja-b55859359/'">
+                        <img class="linked-img" src="/assets/linkedin.png">
+                    </button>
+                    <button class="gmail-button" onclick="window.location.href='mailto:lu.graja2002@gmail.com'">
+                        <img class="gmail-img" src="/assets/gmail.png">
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- =========================================================     -->
+       
+        <div class="project-container">
+            <!-- ADDED BY projectDisplay() FUNCTION IN projects-main.js -->
+            <div class="project-id">
+                <div class="project-info">
+                    <div class="project-name">
+                        <a>Sorting Algorithms</a>
+                    </div>
+                    <div class="project-description">
+                        <h2>Analysis of the computational complexity of six 
+                            popular sorting algorithms: Bubble, Insertion, 
+                            Selection, Quick, Merge, and Heap sort. They are 
+                            presented in the context of different types of data,
+                            such as random, increasing, decreasing, and shapes
+                            A and V. Their performance is discussed in the best,
+                            average, and worst cases, along with charts 
+                            illustrating execution time based on input data.
+                            Quick sort, while regarded as the fastest, does
+                            not always perform the best. Full data is available 
+                            in the Excel spreadsheet.
+                        </h2>
+                    </div>
+                    <div class="project-buttons-section">
+                        <div class="read-more-section">
+                            <a>Read More &rarr;</a>
+                        </div>
+                        <div class="download-section">
+                            <a>Download:</a>
+                            <a href="#">file.zip</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-photo-section">
+                    <img class="project-photo" src="../assets/projects-photos/sorting.PNG">
+                    <a class="technologies">Technologies: C</a>
+                </div>
+            </div>
+        <!-- AOS JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script type="module" src="projects-main.js"></script>
+    </body>
+</html>

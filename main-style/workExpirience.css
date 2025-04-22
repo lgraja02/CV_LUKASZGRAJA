@@ -1,0 +1,244 @@
+
+.cv-work-exp-lines {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    font-family: Helvetica, sans-serif;
+    font-size: 37px;
+    color: rgb(255, 255, 255);
+}
+
+.cv-work-exp-lines::before, 
+.cv-work-exp-lines::after {
+    content: "";
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    display: inline-block; 
+}
+
+.cv-work-exp-lines::before {
+    margin-right: 10px;
+    width: 100%; /* Ustawiono szerokość na 100% */
+}
+
+.cv-work-exp-lines::after {
+    margin-left: 10px;
+    width: 100%; /* Ustawiono szerokość na 100% */
+}
+
+/* =============================================== */
+.cv-work-expirience{
+    display: flex;
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.work-pointers{
+    font-size: 0.9em;
+    line-height: 23px;
+}
+
+.work-name{
+    margin: 0;
+}
+
+.cv-section{
+    width: 90%;
+    color: #f1f1f1;
+    display: flex;
+    background: #111;
+    margin: 2em 0;
+    box-shadow:  0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.bolt-description,.delibike-description, .martel-description{
+    padding: 1.5em;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.delibike-img,.bolt-img, .martel-img{
+    width: 50%;
+    height: 20em;
+    position: relative;
+    overflow: hidden;
+    border: none;
+}
+
+.delibike-img, .bolt-img, .martel-img{
+    background-color: white;
+}
+
+.delibike-logo{
+    position: absolute;
+    bottom: 150px;
+    right: 50px;
+    width: 50%;
+}
+.bolt-logo{
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    width: 50%;
+}
+.martel-logo{
+    position: absolute;
+    bottom: 40px;
+    right: 150px;
+    width: 30%;
+}
+
+
+
+.delibike-img::before,
+.bolt-img::before,
+.martel-img::before
+{
+    content: '';
+    position: absolute;
+    left: -5.6em;
+    top:50%;
+    transform:
+        translateY(-50%) rotate(20deg);
+    background: #111;
+    width: 40%;
+    height: 190%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.bolt-section-left::before,
+.bolt-img::before{
+    transform: 
+        translateY(-50%) rotate(-20deg);
+    left: initial;
+    right: -5.6em;
+}
+
+@media(max-width: 1500px){
+    .martel-logo{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1302px) {
+    .cv-section {
+        width: 90%; /* lub inne wartości zależnie od układu */
+    }
+
+    .bolt-img, .delibike-img, .bolt-description, .delibike-description {
+        width: 100%;
+    }
+    .bolt-img{
+        height: 330px;
+    }
+    .bolt-logo{
+        bottom: 80px;
+    }
+    .martel-logo{
+        width: 50%;
+        right: 50px;
+    }
+    .martel-description{
+        padding-bottom: 0px;
+    }
+
+    .delibike-img::before{
+        width: 120%;
+        height: 70%;
+        top: 0em;
+        left: 50%;
+        transform: translateX(-90%) rotate(100deg); /* Dodaj transformację */
+    }
+    .bolt-img::before {
+        width: 120%; /* Dodaj szerokość, aby był widoczny */
+        height: 70%; /* Dopasuj wysokość */
+        top: auto; /* Ustaw `auto` aby uniknąć konfliktu */
+        bottom: -6.5em; /* Ustaw dolną pozycję */
+        left: 50%; /* Ustaw lewą pozycję */
+        transform: translateY(-90%) rotate(80deg); /* Dodaj transformację */
+    }
+}
+
+@media(max-width: 940px) {
+    .bolt-description, .delibike-description, .martel-description{
+        padding-bottom: 0px;
+        padding-top: 2px;
+    }
+
+    .bolt-logo{
+        width: 60%;
+    }
+    .martel-logo {
+        width: 60%;
+    }
+    .delibike-img::before{
+        height: 40%;
+        width: 150%;
+        top: 30%;
+    }
+    .bolt-img::before{
+        height: 40%;
+        width: 150%;
+        top: 70%;
+        left: 6em;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .cv-section {
+        display: block;
+        width: 20em; /* lub inne wartości zależnie od układu */
+    }
+    .bolt-img, .delibike-img, .bolt-description, .delibike-description, .martel-description, .martel-img{
+        width: 100%;
+    }
+    .delibike-description ,.bolt-description ,.martel-description{
+        padding: 0;
+    }
+
+    .delibike-logo{
+        width: 80%;
+        right: 30px;
+        top: 180px;
+    }
+    .bolt-logo{
+        width: 80%;
+        left: 35px;
+        top: 80px;
+    }
+    .martel-logo{
+        width: 70%;
+        bottom: 20px;
+    }
+
+    .delibike-img::before,
+    .martel-img::before{
+        width: 120%;
+        height: 40%;
+        top: -5em;
+        left: 50%;
+        transform: 
+            translateX(-50%) rotate(10deg);
+    }
+    .bolt-img::before {
+        width: 120%; /* Dodaj szerokość, aby był widoczny */
+        height: 40%; /* Dopasuj wysokość */
+        top: auto; /* Ustaw `auto` aby uniknąć konfliktu */
+        bottom: -5em; /* Ustaw dolną pozycję */
+        left: 50%; /* Ustaw lewą pozycję */
+        transform: translateX(-50%) rotate(-10deg);
+    }
+}
+
+@media (max-width: 475px){
+    .cv-work-exp-lines{
+        font-size: 1.6em;
+    }
+}

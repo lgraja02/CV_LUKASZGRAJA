@@ -1,0 +1,192 @@
+/* ======================== STYLIZACJA NAGŁÓWKA ======================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex; 
+    flex-direction: row; 
+    align-items: stretch; 
+    background: linear-gradient(90deg, rgba(6,0,0,1) 0%, rgba(0,10,0,1) 49%, rgba(19,0,0,1) 100%);
+    padding: 0; 
+    margin: 0; 
+    width: 100%; 
+    height: 100px; 
+
+    z-index: 10;
+}
+
+/* ======================== STYLIZACJA DZIECI NAGŁÓWKA ======================== */
+.header > div {
+    flex: 1; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 10
+}
+
+/* ======================== STYLIZACJA PRZYCISKÓW ======================== */
+.about-me-button, 
+.projects-button, 
+.my-shop-button {
+    width: 100%; 
+    height: 100%; 
+    font-family: "Chakra Petch", serif; 
+    font-weight: 800;
+    font-size: 50px !important; 
+    border: none; 
+    color: rgb(255, 255, 255); 
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer; 
+    transition: background-color 500ms; 
+    text-align: center; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+/* ======================== STYLIZACJA PRZYCISKÓW KONTAKTOWYCH ======================== */
+.contact-buttons > button {
+    border: none; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0); 
+    transition: background-color 500ms; 
+}
+
+.contact-buttons {
+    display: flex; 
+    justify-content: space-around; 
+}
+
+.git-hub-img, .linkedin-img, .gmail-img {
+    width: 50px; 
+    height: 50px; 
+}
+
+/* ======================== STYLIZACJA PRZYCISKU MENU I WITAJĄCEGO TEKSTU ======================== */
+.menu-toggle {
+    display: none; 
+    background-color: rgba(0, 0, 0, 0); 
+    border: none; 
+    padding: 20px; 
+    font-size: 24px; 
+    cursor: pointer; 
+    top: 0; 
+    left: 0; 
+    height: 100%; 
+}
+
+.hamburger-img {
+    width: 50px; 
+    height: 50px; 
+}
+
+.welcome {
+    display: none; 
+    background: linear-gradient(90deg, rgba(71,89,73,1) 0%, rgba(85,117,85,1) 49%, rgba(103,86,86,1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center; 
+    font-weight: normal;
+    font-weight: 800; 
+}
+
+/* ======================STYLIZACJA INTERAKCJI PRZYCISKOW=================== */
+.about-me-button:hover, 
+.projects-button:hover, 
+.my-shop-button:hover,
+.git-hub-button:hover,
+.linkedin-button:hover,
+.gmail-button:hover,
+.menu-toggle:hover {
+    background-color: rgba(14, 85, 14, 0.356); 
+    color: #4d4b4b; 
+}
+
+
+.about-me-button:active, 
+.projects-button:active, 
+.my-shop-button:active,
+.git-hub-button:active,
+.linkedin-button:active,
+.gmail-button:active,
+.menu-toggle:active {
+    background-color: rgba(13, 46, 26, 0.151); 
+    color: #5a5a5a; 
+}
+
+@media (max-width: 1590px) {
+    .intro {
+        font-size: 50px; 
+    }
+}
+@media (max-width: 1385px) {
+    .intro {
+        font-size: 45px; 
+    }
+}
+
+@media (max-width: 1185px) {
+    .intro {
+        font-size: 38px; 
+    }
+}
+
+@media (max-width: 1044px) {
+    .header > div > button {
+        font-size: 30px !important; 
+    }
+
+    .intro{
+        flex-direction: column-reverse;
+        padding-top: 115px;
+    }
+    .profile-photo{
+        border-radius: 30px;
+    }
+}
+
+@media (max-width: 794px) {
+    .header > div > button {
+        font-size: 20px !important; 
+    }
+}
+
+@media (max-width: 630px) {
+    .header > div {
+        display: none;
+        flex-direction: column;
+    }
+
+    .welcome {
+        display: flex; 
+        flex: 1; 
+        justify-content: center; 
+        align-items: center;
+        margin: 0px;
+    }
+    .menu-toggle {
+        display: flex; 
+        justify-content: left; 
+        padding-left: 10px; 
+        align-items: center; 
+        transition: background-color 500ms; 
+    }
+    .welcome{
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 486px) {
+    .header{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 270px) {
+    .header{
+        font-size: 10px;
+    }
+}
+

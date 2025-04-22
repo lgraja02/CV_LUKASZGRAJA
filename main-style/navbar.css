@@ -1,0 +1,132 @@
+
+/* ZMIENNE GLOBALNE */
+:root{
+    --color-1: linear-gradient(90deg, rgba(44,0,51,1) 0%, rgba(0,24,0,1) 46%, rgba(22,0,0,1) 100%);
+    --text-color: #f0f0f0;
+    --accent-color: #0c3600;
+    --hover-color: #082200;
+}
+
+.hamburger-button ,.close-button{
+    width: 50px;
+    height: 50px;
+}
+
+nav{
+    height: 70px;
+    background: var(--color-1);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: fixed;  /* Przypięcie */
+    top: 0;           /* Ustawienie na górze */
+    left: 0;
+    width: 100%;      /* Zapewnia, że navbar zajmuje całą szerokość */
+    z-index: 1000;    /* Wyższy priorytet, by był nad innymi elementami */
+}
+
+.links-container{
+    font-size: 1.7em;
+    font-family: "Chakra Petch", serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: background-color 0.3s;
+}
+
+nav a:hover{
+    background-color: var(--hover-color);
+}
+nav a:active{
+    background-color: var(--accent-color);
+}
+
+.contact-sector{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.github-button ,.linked-button ,.gmail-button{
+    height: 100%;
+    border: none;
+    background-color: var(--color-1);
+    transition: background-color 0.3s;
+}
+.gmail-button{
+    margin-right: 30px;
+}
+.github-button:hover ,.linked-button:hover ,.gmail-button:hover{
+    background-color: var(--hover-color);
+}
+.github-button:active ,.linked-button:active ,.gmail-button:active{
+    background-color: var(--accent-color);
+}
+
+.github-img ,.linked-img ,.gmail-img{
+    width: 50px;
+    height: 50px;
+}
+
+nav .home-link{
+    margin-right: auto;
+}
+
+#sidebar-active{
+    display: none;
+}
+
+.open-sidebar-button, .close-sidebar-button{
+    display: none;
+}
+
+@media (max-width: 680px) {
+    .links-container{
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        position: fixed;
+        top: 0;
+        right: -100%;  /*ODPOWIADA ZA ZAMKNIECIE NAVBAR JEST SCHOWANY ZA STRONE */
+        z-index: 10;
+
+        width: 300px;
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,29,5,1) 73%, rgba(55,0,48,1) 100%);
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.8s ease-in-out;
+    }
+
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: start;
+    }
+    .github-button ,.linked-button ,.gmail-button{
+        height: 55px;
+    }
+    .contact-sector{
+        height: 55px;
+    }
+    .open-sidebar-button ,.close-sidebar-button{
+        display: block;
+        padding: 25px;
+    }
+    #sidebar-active:checked ~ .links-container{
+        display: flex;
+        right: 0;  /* PRZYWRACA SCHOWANA STRONE DO 0  (right -100% w .links-container) */
+    }
+}

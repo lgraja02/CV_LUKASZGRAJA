@@ -1,0 +1,3 @@
+C:/Users/lukasz/CLionProjects/wisielec_degejm/cmake-build-debug/CMakeFiles/wisielec_degejm.dir
+C:/Users/lukasz/CLionProjects/wisielec_degejm/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/lukasz/CLionProjects/wisielec_degejm/cmake-build-debug/CMakeFiles/rebuild_cache.dir
